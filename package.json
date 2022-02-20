@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./dev/test.js",
+    "start": "npm-run-all -p node_1 node_2 node_3 node_4 node_5",
     "node_1": "nodemon --watch dev -e js dev/networkNode.js 3001 http://localhost:3001",
     "node_2": "nodemon --watch dev -e js dev/networkNode.js 3002 http://localhost:3002",
     "node_3": "nodemon --watch dev -e js dev/networkNode.js 3003 http://localhost:3003",
@@ -21,5 +22,8 @@
     "request-promise": "^4.2.2",
     "sha256": "^0.2.0",
     "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
